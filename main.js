@@ -40,9 +40,15 @@ function showQuote() {
 
   const quoteContainerElement = document.querySelector('.quote-container');
   const quoteElement = document.createElement('p');
-  quoteElement.innerHTML ='"'+ randomQuote.quote + '" by -'+randomQuote.author;
+  const authorElement = document.createElement('p')
+  quoteElement.innerHTML = randomQuote.quote;
+  authorElement.innerHTML = '-'+ randomQuote.author;
+
   clearAll();
+
   quoteContainerElement.appendChild(quoteElement);
+  quoteContainerElement.appendChild(authorElement);
+  
 }
 
 
